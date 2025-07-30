@@ -112,7 +112,7 @@ const Cart = () => {
           {/* Cart Items List */}
           {cart.length > 0 ? (
             <div>
-              <ul className="space-y-2 mb-5 max-h-72 overflow-y-auto">
+              <ul className="space-y-2 mb-5 max-h-80 overflow-y-auto">
                 {cart.map((item) => (
                   <li
                     key={item.id}
@@ -126,7 +126,7 @@ const Cart = () => {
                     <span className="flex-grow text-gray-800">{item.name}</span>
                     <button
                       onClick={() => removeItem(item.id)}
-                      className="text-red-500 hover:text-red-700 px-3 focus:outline-none"
+                      className="text-red-500 hover:text-red-700 px-3 focus:outline-none transition-all duration-300 transform hover:scale-110"
                     >
                       <Trash2 className="w-6 h-6" />
                     </button>
