@@ -7,8 +7,8 @@ const Cart = () => {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    axios.get("../../experts.json").then((data) => {
-      // console.log(data.data);
+    axios.get("../../public/experts.json").then((data) => {
+      console.log(data.data);
       setExperts(data.data);
     });
   }, []);
