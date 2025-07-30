@@ -6,7 +6,7 @@ const Cart = () => {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    fetch("./experts.JSON")
+    fetch("/experts.json")
       .then((response) => response.json())
       .then((data) => setExperts(data));
   }, []);
