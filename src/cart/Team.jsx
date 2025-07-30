@@ -1,4 +1,3 @@
-import axios from "axios";
 import { ShoppingCart, Trash2 } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
@@ -7,9 +6,9 @@ const Cart = () => {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    axios.get("./experts.JSON").then((data) => {
-      setExperts(data.data);
-    });
+    fetch("./experts.JSON")
+      .then((response) => response.json())
+      .then((data) => setExperts(data));
   }, []);
 
   const addItem = (user) => {
