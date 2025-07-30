@@ -1,7 +1,9 @@
+import Cart from "./cart/Team";
+
 function App() {
   return (
     <>
-      <h1>Hello World!</h1>
+      <Cart />
     </>
   );
 }
